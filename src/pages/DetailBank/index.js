@@ -3,7 +3,7 @@ import './detailBank.scss';
 
 const DetailBank = () => {
     return (
-        <div>
+        <div style={{paddingTop: 48}}>
             <h1 className="detail-title">Info Antrian Hari Ini</h1>
             <h1 className="detail-title">Kamis, 8 Juni 2021</h1>
 
