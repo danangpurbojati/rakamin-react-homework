@@ -3,6 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import { Button} from 'antd';
 import "./navbar.scss"
 import ImgBRI from '../../assets/images-ui-navbar/logo-long-bri.png'
+import { Link } from 'react-router-dom';
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -16,9 +17,15 @@ const Navbar = () => {
                                 <img clasName="logo" src={ImgBRI} alt="logo bri"/>
                                 <div className="menu-right"> 
                                     <Menu className="menu" mode="horizontal" defaultSelectedKeys={['2']}>
-                                        <Menu.Item className="menu">Beranda</Menu.Item>
-                                        <Menu.Item className="menu">Book Nomor Antrian</Menu.Item>
-                                        <Menu.Item className="menu">Daftar Bank & Info Antrian</Menu.Item>
+                                        <Menu.Item className="menu">
+                                            <Link style={{color: '#fff'}} to="/beranda">Beranda</Link>
+                                        </Menu.Item>
+                                        <Menu.Item className="menu">
+                                            <Link to="/book-antrian" style={{color: '#fff'}}>Book Nomor Antrian</Link>  
+                                        </Menu.Item>
+                                        <Menu.Item className="menu">
+                                            <Link to="/daftar-bank" style={{color: '#fff'}}>DaftarBank & Info Antrian</Link>  
+                                        </Menu.Item>
                                         
                                     </Menu>
                                     <Button className="btn-out"  shape="round">Sign out</Button>

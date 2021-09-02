@@ -9,7 +9,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { UserProvider } from "./context/UserContext";
 import './App.css';
 import Beranda from './pages/Beranda';
-
+import DetailBank from './pages/DetailBank';
+import DaftarBank from './pages/DaftarBank';
+import BookAntrian from './pages/BookAntrian';
 
 function App() {
   return (
@@ -17,12 +19,15 @@ function App() {
       <Router>
         <Navbar/>
         
-        <div>
-        <Switch>
-          <Route path="/beranda" component={Beranda}/>
-          <Route path="/" exact component={LoginPages} />
-          <Route path="/register" component={RegisterPages} />
-        </Switch>
+        <div style={{minHeight: '100vh'}}>
+            <Switch>
+                <Route path="/beranda" component={Beranda}/>
+                <Route path="/" exact component={LoginPages} />
+                <Route path="/register" component={RegisterPages} />
+                <Route path="/detail-info-antrian/:id" component={DetailBank} />
+                <Route path="/daftar-bank" component={DaftarBank} />
+                <Route path="/book-antrian" component={BookAntrian} />
+            </Switch>
         </div>
 
         <Footer/>
